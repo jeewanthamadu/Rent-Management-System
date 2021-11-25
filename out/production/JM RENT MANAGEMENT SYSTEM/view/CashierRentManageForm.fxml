@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="manageRentFormContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1147.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierRentManageFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="679.0" prefWidth="1154.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="106.0" prefWidth="200.0" stylesheets="@../style/style.css">
+                     <children>
+                        <Label text="Label" />
+                        <ImageView fitHeight="690.0" fitWidth="1152.0">
+                           <image>
+                              <Image url="@../assets/wallpaper.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <styleClass>
+                        <String fx:value="jfx-combo-box" />
+                        <String fx:value="jfx-text-field" />
+                     </styleClass>
+                  </StackPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="696.0" opacity="0.71" stroke="BLACK" strokeType="INSIDE" width="1154.0" />
+                  <TableView fx:id="tblRent" layoutX="18.0" layoutY="423.0" prefHeight="195.0" prefWidth="1120.0">
+                     <columns>
+                        <TableColumn fx:id="colVehicleNumber" prefWidth="156.0" text="Vehicle Number" />
+                        <TableColumn fx:id="colDescription" prefWidth="207.0" text="Description" />
+                        <TableColumn fx:id="colCostDay" prefWidth="163.0" text="Cost (For 01 Day)" />
+                        <TableColumn fx:id="colDriverId" prefWidth="145.0" text="Driver Id" />
+                        <TableColumn fx:id="colCustomerId" prefWidth="162.0" text="Customer ID" />
+                        <TableColumn fx:id="colTotalDays" prefWidth="144.0" text="Total Days" />
+                        <TableColumn fx:id="colTotalCost" editable="false" prefWidth="143.0" resizable="false" text="Total Cost" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#3d4043" height="284.0" layoutX="11.0" layoutY="122.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="1128.0" />
+                  <Button layoutX="934.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnAddTblOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #2ecc71;" text="ADD" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="536.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnAddNewCustomerOnAction" prefHeight="40.0" prefWidth="186.0" style="-fx-background-color: #3498db;" text="ADD NEW CUSTOMER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="754.0" layoutY="345.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #e74c3c;" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#747a80" height="72.0" layoutX="14.0" layoutY="23.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="1121.0" />
+                  <Label layoutX="156.0" layoutY="28.0" prefHeight="62.0" prefWidth="683.0" text="JM RENT MANAGEMENT SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="874.0" layoutY="25.0" prefHeight="55.0" prefWidth="251.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="922.0" layoutY="65.0" prefHeight="28.0" prefWidth="205.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="1078.0" layoutY="34.0" onAction="#btnLogout" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 50;" text=" " textFill="WHITE" />
+                  <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="1084.0" layoutY="78.0" mouseTransparent="true" size="50" wrappingWidth="35.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#747a80" height="47.0" layoutX="13.0" layoutY="632.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="1128.0" />
+                  <Button layoutX="977.0" layoutY="641.0" mnemonicParsing="false" onAction="#btnRentOnAction" prefHeight="24.0" prefWidth="108.0" style="-fx-background-color: #27ae60;" text="RENT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="153.0" fitWidth="164.0" focusTraversable="true" layoutX="-11.0" layoutY="-19.0">
+                     <image>
+                        <Image url="@../assets/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblLastCost" layoutX="47.0" layoutY="634.0" prefHeight="36.0" prefWidth="185.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font></Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="1060.0" layoutY="201.0" mouseTransparent="true" size="20" wrappingWidth="35.0" />
+                  <JFXTextField fx:id="txtRentId" editable="false" focusColor="WHITE" labelFloat="true" layoutX="38.0" layoutY="114.0" prefHeight="39.0" prefWidth="135.0" unFocusColor="WHITE" />
+                  <JFXComboBox fx:id="cmbDriverID" focusColor="WHITE" labelFloat="true" layoutX="347.0" layoutY="172.0" prefHeight="25.0" prefWidth="183.0" promptText="Driver ID" styleClass="jfx-combo-box" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="txtDriverName" editable="false" focusColor="WHITE" labelFloat="true" layoutX="347.0" layoutY="238.0" prefHeight="39.0" prefWidth="192.0" promptText="Driver Name" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXComboBox fx:id="cmbVehicleNumber" focusColor="WHITE" labelFloat="true" layoutX="71.0" layoutY="172.0" prefHeight="25.0" prefWidth="183.0" promptText="Vehicle Number" styleClass="jfx-combo-box" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="txtVehicleDesc" editable="false" focusColor="WHITE" labelFloat="true" layoutX="71.0" layoutY="239.0" prefHeight="39.0" prefWidth="192.0" promptText="Description" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="txtVehicleCost" editable="false" focusColor="WHITE" labelFloat="true" layoutX="71.0" layoutY="310.0" prefHeight="39.0" prefWidth="192.0" promptText="Cost" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="txtCustomerID" editable="false" focusColor="WHITE" labelFloat="true" layoutX="891.0" layoutY="238.0" prefHeight="39.0" prefWidth="192.0" promptText="ID" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXTextField fx:id="txtSearchNic" focusColor="WHITE" labelFloat="true" layoutX="891.0" layoutY="172.0" onKeyReleased="#txtSearch" prefHeight="39.0" prefWidth="192.0" promptText="Customer nic" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <JFXDatePicker fx:id="rentDate" layoutX="582.0" layoutY="172.0" promptText="Rent Date" styleClass="jfx-combo-box" stylesheets="@../style/style.css" />
+                  <JFXDatePicker fx:id="returnDate" layoutX="582.0" layoutY="238.0" promptText="Return Date" styleClass="jfx-combo-box" stylesheets="@../style/style.css" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

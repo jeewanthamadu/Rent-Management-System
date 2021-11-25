@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="adminHomeContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1147.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminHomeFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="679.0" prefWidth="1154.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="106.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Label" />
+                        <ImageView fitHeight="690.0" fitWidth="1152.0">
+                           <image>
+                              <Image url="@../assets/wallpaper.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="696.0" layoutY="-7.0" opacity="0.71" stroke="BLACK" strokeType="INSIDE" width="1154.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#747a80" height="72.0" layoutX="14.0" layoutY="23.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="1121.0" />
+                  <Label layoutX="156.0" layoutY="28.0" prefHeight="62.0" prefWidth="683.0" text="JM RENT MANAGEMENT SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="874.0" layoutY="25.0" prefHeight="55.0" prefWidth="251.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="922.0" layoutY="65.0" prefHeight="28.0" prefWidth="205.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="1078.0" layoutY="34.0" onAction="#btnLogout" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 50;" text=" " textFill="WHITE" />
+                  <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="1084.0" layoutY="78.0" mouseTransparent="true" size="50" text="" wrappingWidth="35.0" />
+                  <ImageView fitHeight="153.0" fitWidth="164.0" focusTraversable="true" layoutX="-11.0" layoutY="-19.0">
+                     <image>
+                        <Image url="@../assets/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#3d4043" height="46.0" layoutX="15.0" layoutY="155.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="1121.0" />
+                  <TableView fx:id="tblDashBoard" layoutX="24.0" layoutY="227.0" prefHeight="222.0" prefWidth="1103.0" stylesheets="@../style/style.css">
+                     <columns>
+                        <TableColumn fx:id="colVehicleNumber" prefWidth="237.0" text="Vehicle Number" />
+                        <TableColumn fx:id="colModelID" minWidth="6.0" prefWidth="214.0" text="Model ID" />
+                        <TableColumn fx:id="colCategoryID" prefWidth="224.0" text="Categorize ID" />
+                        <TableColumn fx:id="colDescription" minWidth="0.0" prefWidth="250.0" text="Description" />
+                        <TableColumn fx:id="colCost" minWidth="0.0" prefWidth="178.0" resizable="false" text="Cost" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="txtSearchBar" focusColor="WHITE" layoutX="37.0" layoutY="152.0" onKeyReleased="#searchBar" prefHeight="39.0" prefWidth="347.0" promptText="Search" styleClass="jfx-text-field" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#55ab4b" height="95.0" layoutX="823.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#cd4848" height="95.0" layoutX="14.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="303.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#227fae" height="95.0" layoutX="411.0" layoutY="547.0" stroke="BLACK" strokeType="INSIDE" width="304.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#dd2c2c" height="93.0" layoutX="14.0" layoutY="548.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="81.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#247ca8" height="93.0" layoutX="413.0" layoutY="548.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="81.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#499a3e" height="93.0" layoutX="823.0" layoutY="548.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="81.0" />
+                  <ImageView fitHeight="56.0" fitWidth="65.0" layoutX="22.0" layoutY="567.0">
+                     <image>
+                        <Image url="@../assets/rent.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="426.0" layoutY="560.0">
+                     <image>
+                        <Image url="@../assets/customer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="66.0" fitWidth="64.0" layoutX="833.0" layoutY="562.0">
+                     <image>
+                        <Image url="@../assets/driver.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="110.0" layoutY="610.0" prefHeight="17.0" prefWidth="183.0" text="Available Rent Items" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="932.0" layoutY="609.0" prefHeight="28.0" prefWidth="65.0" text="Drivers" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="509.0" layoutY="609.0" prefHeight="28.0" prefWidth="100.0" text="Customers" textFill="WHITE">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRentItems" layoutX="161.0" layoutY="556.0" prefHeight="58.0" prefWidth="63.0" textFill="WHITE">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustomers" layoutX="521.0" layoutY="556.0" prefHeight="58.0" prefWidth="63.0" textFill="WHITE">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDrivers" layoutX="951.0" layoutY="556.0" prefHeight="58.0" prefWidth="63.0" textFill="WHITE">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="458.0" layoutY="100.0" prefHeight="64.0" prefWidth="328.0" text="Available Items" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="43.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="359.0" layoutY="183.0" mouseTransparent="true" size="20" wrappingWidth="35.0" />
+                  <JFXButton layoutX="610.0" layoutY="570.0" onMouseClicked="#CustomerDetailsOnClick" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: black;" text="Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="1018.0" layoutY="573.0" onMouseClicked="#DriverDetailsOnClick" prefHeight="31.0" prefWidth="99.0" style="-fx-background-color: black;" text="Details" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <Rectangle arcHeight="50.0" arcWidth="20.0" fill="WHITE" height="46.0" layoutX="14.0" layoutY="475.0" stroke="WHITE" strokeType="INSIDE" width="1121.0" />
+                  <JFXDatePicker fx:id="fromDate" layoutX="144.0" layoutY="476.0" prefHeight="39.0" prefWidth="286.0" stylesheets="@../style/style2.css" />
+                  <JFXDatePicker fx:id="toDate" layoutX="568.0" layoutY="476.0" prefHeight="39.0" prefWidth="286.0" stylesheets="@../style/style2.css" />
+                  <JFXButton layoutX="894.0" layoutY="480.0" onAction="#btnFinancialReportOnAction" prefHeight="38.0" prefWidth="227.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="Search Financial Report" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="59.0" layoutY="488.0" text="FROM : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="499.0" layoutY="487.0" text="TO : ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

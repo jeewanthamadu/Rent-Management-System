@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DriverSalaryReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4c193ce2-2080-4b9c-8596-bb46bc60e0ef">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from driver_salary]]>
+	</queryString>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="driver_salary"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Salary" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="Salary"/>
+		<property name="com.jaspersoft.studio.field.label" value="Salary"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="driver_salary"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Driver_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Driver_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="Driver_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="driver_salary"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Rent_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Rent_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="Rent_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="driver_salary"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="184" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="30" uuid="c234d49e-3dd3-4316-bc9a-d4e05df36d16"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JM RENTAL CAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="555" height="29" uuid="37c7821e-8b70-4565-9c63-41b38f1acdc8"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALARY REPORT]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="47" width="555" height="18" uuid="9333e249-b4aa-4060-b1cd-f89a3705b938"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="0" y="65" width="555" height="20" uuid="95cf4224-c883-4ddc-8413-d49afcfe374f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="213" y="46" width="150" height="123" uuid="138689db-a76e-4383-a836-cd8d364ae798"/>
+				<imageExpression><![CDATA["C:/Users/HI/Desktop/IJSE FINAL PROJECT/Rent Car Management System/JM RENT MANAGEMENT SYSTEM/src/assets/Logo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="193" y="126" width="160" height="52" uuid="ad6fb53c-27b0-40c6-9b1a-c7db2120934a"/>
+				<imageExpression><![CDATA["C:/Users/HI/Desktop/IJSE FINAL PROJECT/Rent Car Management System/JM RENT MANAGEMENT SYSTEM/src/assets/1.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" uuid="9c089a73-e383-4cdd-b1b8-d857910180fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88c4f994-81c3-4094-bda6-adbc8a88385c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" uuid="12c4f89f-d74e-4bc7-8482-5cd9904675e1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e96b6f9-f8bd-4d33-a2cc-7a5eadfd69c0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" uuid="bf5cc66e-432e-40b8-981f-29d5530eaaa9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cff4c777-d02d-46da-8c79-df750cb7df4f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Driver_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" uuid="630ef27c-beb9-4628-bf47-4a24cd8022b1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78df6c21-bfce-4a22-b855-20773d36a325"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rent_ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="141" height="30" backcolor="#F2EDED" uuid="d40a758e-e7a8-41c2-bc94-7a083f45ef27">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88c4f994-81c3-4094-bda6-adbc8a88385c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="0" width="138" height="30" backcolor="#F2EDED" uuid="ae731cbf-6ff0-424f-9dad-9efdc1375ee7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1e96b6f9-f8bd-4d33-a2cc-7a5eadfd69c0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="0" width="138" height="30" backcolor="#F2EDED" uuid="aae374e0-528a-4b50-85ac-7188b56d617d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cff4c777-d02d-46da-8c79-df750cb7df4f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Driver_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="0" width="138" height="30" backcolor="#F2EDED" uuid="0d0a575a-dfa8-44bf-bb9b-60436354592a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="78df6c21-bfce-4a22-b855-20773d36a325"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Rent_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54">
+			<textField>
+				<reportElement x="0" y="24" width="555" height="30" uuid="9aac4087-f6d1-4b4f-af34-61e0b6811729"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

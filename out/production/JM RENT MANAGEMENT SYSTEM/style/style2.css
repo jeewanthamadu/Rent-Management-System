@@ -1,0 +1,6 @@
+.jfx-text-field{
+    /*-fx-prompt-text-fill: red;*/
+    -fx-font-size: 18;
+    -fx-font-family: "Roboto Black";
+    -fx-text-fill: Black;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="driverSalaryContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DriverPaymentFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="679.0" prefWidth="1154.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="106.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Label" />
+                        <ImageView fitHeight="690.0" fitWidth="1152.0">
+                           <image>
+                              <Image url="@../assets/wallpaper.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="696.0" opacity="0.71" stroke="BLACK" strokeType="INSIDE" width="1154.0" />
+                  <TableView fx:id="tblDriverSalary" layoutX="17.0" layoutY="210.0" prefHeight="461.0" prefWidth="1120.0" stylesheets="@../style/style.css">
+                     <columns>
+                        <TableColumn fx:id="colRentId" prefWidth="272.0" text="Rent_ID" />
+                        <TableColumn fx:id="colDriverID" prefWidth="338.0" text="Driver_ID" />
+                        <TableColumn fx:id="colName" prefWidth="296.0" text="Name" />
+                        <TableColumn fx:id="colSalary" prefWidth="214.0" resizable="false" text="Salary" />
+                     </columns>
+                  </TableView>
+                  <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#747a80" height="59.0" layoutX="14.0" layoutY="124.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="1128.0" />
+                  <Rectangle arcHeight="50.0" arcWidth="20.0" fill="#747a80" height="72.0" layoutX="14.0" layoutY="23.0" opacity="0.82" stroke="BLACK" strokeType="INSIDE" width="1121.0" />
+                  <Label layoutX="156.0" layoutY="28.0" prefHeight="62.0" prefWidth="683.0" text="JM RENT MANAGEMENT SYSTEM" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="874.0" layoutY="25.0" prefHeight="55.0" prefWidth="251.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="922.0" layoutY="65.0" prefHeight="28.0" prefWidth="205.0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="1078.0" layoutY="34.0" onAction="#btnLogout" prefHeight="52.0" prefWidth="52.0" style="-fx-background-radius: 50;" text=" " textFill="WHITE" />
+                  <FontAwesomeIconView glyphName="SIGN_OUT" layoutX="1084.0" layoutY="78.0" mouseTransparent="true" size="50" wrappingWidth="35.0" />
+                  <ImageView fitHeight="153.0" fitWidth="164.0" focusTraversable="true" layoutX="-11.0" layoutY="-19.0">
+                     <image>
+                        <Image url="@../assets/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="340.0" layoutY="159.0" mouseTransparent="true" size="20" wrappingWidth="41.0" />
+                  <JFXButton buttonType="RAISED" layoutX="962.0" layoutY="136.0" onMouseClicked="#btnReport" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: black; -fx-background-radius: 20;" text="DETAILS" textFill="WHITE" />
+                  <JFXTextField fx:id="txtSearch" focusColor="WHITE" layoutX="34.0" layoutY="134.0" onKeyReleased="#txtSearch" prefHeight="39.0" prefWidth="335.0" promptText="Search" stylesheets="@../style/style.css" unFocusColor="WHITE" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

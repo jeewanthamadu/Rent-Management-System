@@ -1,0 +1,90 @@
+
+/*Table Styles Start*/
+.table-view, table-view:focused{
+    -fx-background-insets: 0px;
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-padding: 0 0 0 0;
+}
+
+.table-view .column-header{
+    -fx-size:25px;
+    -fx-background-color: #287be7;
+    -fx-font-size: 18;
+}
+.table-view .column-header .label{
+    -fx-text-fill:  #f8f6ee;
+}
+.table-view .table-row-cell:empty{
+    -fx-background-color:  #f8f6ee;
+}
+.table-view .table-row-cell:selected {
+    -fx-background-color: linear-gradient(to right, rgba(119, 8, 245, 0.29), rgba(15, 93, 255, 0.39));
+}
+.table-view .table-row-cell:focused{
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+.table-view .table-row-cell:hover{
+    -fx-background-color:linear-gradient(to right, rgba(119, 8, 245, 0.29), rgba(15, 93, 255, 0.39));
+}
+.table-view .table-row-cell:selected{
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: rgb(54, 49, 49);
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to right, #1e3c72, #2a5298);
+    -fx-background-radius: 20px 20px 0px 0px;
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 10 0 10px 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    border-style: hidden;
+}
+
+
+
+/*text field*/
+.jfx-text-field{
+    -fx-prompt-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-family: "Roboto Black";
+    -fx-text-fill: white;
+}
+/*text field Black*/
+.jfx-text-field2{
+    -fx-prompt-text-fill: Black;
+    -fx-font-size: 18;
+    -fx-font-family: "Roboto Black";
+    -fx-text-fill: Black;
+}
+
+/*cmb*/
+
+.jfx-combo-box{
+    -fx-prompt-text-fill:white;
+    -fx-font-size: 18;
+    -fx-font-family: "Roboto Black";
+}
+.jfx-combo-box .list-cell:filled:selected .text{
+    -fx-fill: white;
+}
+.jfx-combo-box .choice-box{
+    -fx-backgroundcolor: #ADD8E6;
+    -fx-focus-color: midnightblue;
+    -fx-faint-focus-color: #ADD8E6;
+    -fx-control-inner-background: #ADD8E6;
+    -fx-selection-bar: midnightblue;
+}
+.choice-box .menu-item:focused .label{
+    -fx-text-fill: white;
+}
+
+.jfx-combo-box:editable .date-picker-display-node .input-line{
+    -fx-background-color: white;
+}
+.jfx-combo-box:editable .date-picker-display-node{
+    -jfx-label-float:true;
+}
+
